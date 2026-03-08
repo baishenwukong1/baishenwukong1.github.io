@@ -1,0 +1,264 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>VMware虚拟机+CentOS Linux 7 (Core) + MobaXterm 环境学习 Linux | 白神悟空的学习成长记录</title><meta name="author" content="白神悟空"><meta name="copyright" content="白神悟空"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="VMware虚拟机+CentOS Linux 7 (Core) + MobaXterm 环境学习 Linux作者: 白神悟空状态: 草稿类别: PRD上次编辑时间: 2026年3月8日 13:34 本篇为后面学习Linux和大数据方面的技术知识做环境准备，该环境的优势在于小型简单易于准备。一、软件方面：1、VMware虚拟机：https:&#x2F;&#x2F;www.vmware.com&#x2F;products&#x2F;desk">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VMware虚拟机+CentOS Linux 7 (Core) + MobaXterm 环境学习 Linux">
+<meta property="og:url" content="http://example.com/2026/03/08/ExportBlock-3943950a-519d-4a3c-b9cf-09b81d51a2ee-Part-1/VMware%E8%99%9A%E6%8B%9F%E6%9C%BA+CentOS%20Linux%207%20(Core)%20+%20MobaXterm%20%E7%8E%AF%E5%A2%83%E5%AD%A6%E4%B9%A0%20L%2031d9a204ea2680d3b8d7c9eaec0fb94d/index.html">
+<meta property="og:site_name" content="白神悟空的学习成长记录">
+<meta property="og:description" content="VMware虚拟机+CentOS Linux 7 (Core) + MobaXterm 环境学习 Linux作者: 白神悟空状态: 草稿类别: PRD上次编辑时间: 2026年3月8日 13:34 本篇为后面学习Linux和大数据方面的技术知识做环境准备，该环境的优势在于小型简单易于准备。一、软件方面：1、VMware虚拟机：https:&#x2F;&#x2F;www.vmware.com&#x2F;products&#x2F;desk">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/tx.jpg">
+<meta property="article:published_time" content="2026-03-08T04:00:00.000Z">
+<meta property="article:modified_time" content="2026-03-08T06:06:03.844Z">
+<meta property="article:author" content="白神悟空">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="学习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/tx.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "VMware虚拟机+CentOS Linux 7 (Core) + MobaXterm 环境学习 Linux",
+  "url": "http://example.com/2026/03/08/ExportBlock-3943950a-519d-4a3c-b9cf-09b81d51a2ee-Part-1/VMware%E8%99%9A%E6%8B%9F%E6%9C%BA+CentOS%20Linux%207%20(Core)%20+%20MobaXterm%20%E7%8E%AF%E5%A2%83%E5%AD%A6%E4%B9%A0%20L%2031d9a204ea2680d3b8d7c9eaec0fb94d/",
+  "image": "http://example.com/img/tx.jpg",
+  "datePublished": "2026-03-08T04:00:00.000Z",
+  "dateModified": "2026-03-08T06:06:03.844Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "白神悟空",
+      "url": "http://example.com"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2026/03/08/ExportBlock-3943950a-519d-4a3c-b9cf-09b81d51a2ee-Part-1/VMware%E8%99%9A%E6%8B%9F%E6%9C%BA+CentOS%20Linux%207%20(Core)%20+%20MobaXterm%20%E7%8E%AF%E5%A2%83%E5%AD%A6%E4%B9%A0%20L%2031d9a204ea2680d3b8d7c9eaec0fb94d/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'VMware虚拟机+CentOS Linux 7 (Core) + MobaXterm 环境学习 Linux',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><script src="/js/random_bg.js"></script><meta name="generator" content="Hexo 8.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/tx.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">白神悟空的学习成长记录</span></a><a class="nav-page-title" href="/"><span class="site-name">VMware虚拟机+CentOS Linux 7 (Core) + MobaXterm 环境学习 Linux</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><span> 关于我</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">VMware虚拟机+CentOS Linux 7 (Core) + MobaXterm 环境学习 Linux</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-03-08T04:00:00.000Z" title="发表于 2026-03-08 12:00:00">2026-03-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-03-08T06:06:03.844Z" title="更新于 2026-03-08 14:06:03">2026-03-08</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Linux/">Linux</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="VMware虚拟机-CentOS-Linux-7-Core-MobaXterm-环境学习-Linux"><a href="#VMware虚拟机-CentOS-Linux-7-Core-MobaXterm-环境学习-Linux" class="headerlink" title="VMware虚拟机+CentOS Linux 7 (Core) + MobaXterm 环境学习 Linux"></a>VMware虚拟机+CentOS Linux 7 (Core) + MobaXterm 环境学习 Linux</h1><p>作者: 白神悟空<br>状态: 草稿<br>类别: PRD<br>上次编辑时间: 2026年3月8日 13:34</p>
+<h3 id="本篇为后面学习Linux和大数据方面的技术知识做环境准备，该环境的优势在于小型简单易于准备。"><a href="#本篇为后面学习Linux和大数据方面的技术知识做环境准备，该环境的优势在于小型简单易于准备。" class="headerlink" title="本篇为后面学习Linux和大数据方面的技术知识做环境准备，该环境的优势在于小型简单易于准备。"></a>本篇为后面学习Linux和大数据方面的技术知识做环境准备，该环境的优势在于小型简单易于准备。</h3><h3 id="一、软件方面："><a href="#一、软件方面：" class="headerlink" title="一、软件方面："></a>一、软件方面：</h3><p>1、VMware虚拟机：<a target="_blank" rel="noopener" href="https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion">https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion</a></p>
+<p>2、CentOS Linux 7 （Core）：</p>
+<p>官方历史镜像下载（最常用）因为 <strong>CentOS 7 在 2024 年已经停止维护</strong>，现在需要从 <strong>历史仓库 Vault</strong> 下载。</p>
+<p>打开这个页面：</p>
+<p><strong>CentOS 7 下载地址：</strong></p>
+<p><a target="_blank" rel="noopener" href="https://vault.centos.org/7.9.2009/isos/x86_64/">https://vault.centos.org/7.9.2009/isos/x86_64&#x2F;</a></p>
+<p>进入后你会看到几个文件：</p>
+<table>
+<thead>
+<tr>
+<th>文件</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CentOS-7-x86_64-DVD-2009.iso</td>
+<td>完整安装包（推荐）</td>
+</tr>
+<tr>
+<td>CentOS-7-x86_64-Minimal-2009.iso</td>
+<td>最小版本（Core）</td>
+</tr>
+<tr>
+<td>CentOS-7-x86_64-NetInstall.iso</td>
+<td>网络安装</td>
+</tr>
+</tbody></table>
+<hr>
+<p>下载这个即可：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CentOS-7-x86_64-Minimal-2009.iso</span><br></pre></td></tr></table></figure>
+
+<p>因为：</p>
+<ul>
+<li>就是 <strong>Core版本</strong></li>
+<li>只有命令行</li>
+<li>和服务器环境一样</li>
+</ul>
+<p>大小大约：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1GB 左右</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>安装后的效果</p>
+<p>安装完成后系统会是这种样子：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">CentOS Linux release 7.9 (Core)</span><br><span class="line"></span><br><span class="line">localhost login:</span><br></pre></td></tr></table></figure>
+
+<p>没有图形界面，只有终端，这就是 <strong>Core版本</strong>。</p>
+<p>3、MobaXterm软件：</p>
+<p><a target="_blank" rel="noopener" href="https://mobaxterm.mobatek.net/">https://mobaxterm.mobatek.net/</a></p>
+<h3 id="二、环境搭建"><a href="#二、环境搭建" class="headerlink" title="二、环境搭建"></a>二、环境搭建</h3><p>1、首先将下载好的CentOS Linux7 core的镜像文件安装在VMware虚拟机内，寻常安装就可以。</p>
+<p>安装好后的界面是这样的</p>
+<p><img src="/VMware%E8%99%9A%E6%8B%9F%E6%9C%BA+CentOS%20Linux%207%20(Core)%20+%20MobaXterm%20%E7%8E%AF%E5%A2%83%E5%AD%A6%E4%B9%A0%20L/image.png" alt="image.png"></p>
+<p>2、安装好后还需要配置虚拟机IP</p>
+<p>VMWare虚拟机网络连接方式常见的有桥接、仅主机、NAT三种模式，每种模式应用的IP网段都有所不同。其中NAT是常用模式。本例将以NAT为例，演示IP配置过程，共计分为IP的确定、配置IP两步。</p>
+<p>（1）IP的确定</p>
+<p>查看WMWare WorkStation在安装时分配的NAT网络情况。首先依次选择“编辑—&gt;虚拟网络编辑器”</p>
+<p><img src="/VMware%E8%99%9A%E6%8B%9F%E6%9C%BA+CentOS%20Linux%207%20(Core)%20+%20MobaXterm%20%E7%8E%AF%E5%A2%83%E5%AD%A6%E4%B9%A0%20L/image%201.png" alt="image.png"></p>
+<p>在“虚拟网络编辑器”窗口中如图，选中“1”，查看NAT网段情况。如图网段为“192.168.237.”，子网掩码为“255.255.255.0”</p>
+<p><img src="/VMware%E8%99%9A%E6%8B%9F%E6%9C%BA+CentOS%20Linux%207%20(Core)%20+%20MobaXterm%20%E7%8E%AF%E5%A2%83%E5%AD%A6%E4%B9%A0%20L/image%202.png" alt="image.png"></p>
+<p>单击“2”对应的“NAT设置”按钮，查看网络的网关为“192.168.237.2”，请记住这个IP。</p>
+<p>单击图中标号“3”对应的“DHCP设置”按钮，可以查看虚拟机中能用的IP网段建议取值范围，建议介于192.168.237.128与192.168.237.254之间。</p>
+<p>确认Windows宿主机NAT网段与VMWare给出的NAT网段一致。即都处于“192.168.237.”。</p>
+<p><strong>假设最后确定IP，为“192.168.237.129”。</strong></p>
+<p><img src="/VMware%E8%99%9A%E6%8B%9F%E6%9C%BA+CentOS%20Linux%207%20(Core)%20+%20MobaXterm%20%E7%8E%AF%E5%A2%83%E5%AD%A6%E4%B9%A0%20L/image%203.png" alt="image.png"></p>
+<p>（2）配置IP</p>
+<p>请用root用户进行配置。</p>
+<p>1）配置ens33对应网卡IP地址的配置文件ifcfg-ens33。</p>
+<p><code>[root@localhost ~]# vi /etc/sysconfig/network-scripts/ifcfg-ens33</code></p>
+<p>在打开的文件编辑器中，编辑IP属性的值，静态IP设置的参考配置如下。</p>
+<p><img src="/VMware%E8%99%9A%E6%8B%9F%E6%9C%BA+CentOS%20Linux%207%20(Core)%20+%20MobaXterm%20%E7%8E%AF%E5%A2%83%E5%AD%A6%E4%B9%A0%20L/image%204.png" alt="image.png"></p>
+<p>2）开机激活网路</p>
+<p><code>[root@localhost ~]# vi /etc/sysconfig/network</code></p>
+<p><img src="/VMware%E8%99%9A%E6%8B%9F%E6%9C%BA+CentOS%20Linux%207%20(Core)%20+%20MobaXterm%20%E7%8E%AF%E5%A2%83%E5%AD%A6%E4%B9%A0%20L/image%205.png" alt="image.png"></p>
+<p>3）修改对应网卡的DNS的配置文件</p>
+<p><code>[root@localhost ~]# vi /etc/resolv.conf</code></p>
+<p>编辑该文件的内容：</p>
+<p><img src="/VMware%E8%99%9A%E6%8B%9F%E6%9C%BA+CentOS%20Linux%207%20(Core)%20+%20MobaXterm%20%E7%8E%AF%E5%A2%83%E5%AD%A6%E4%B9%A0%20L/image%206.png" alt="image.png"></p>
+<p>（3）systemctl重启网络</p>
+<p><img src="/VMware%E8%99%9A%E6%8B%9F%E6%9C%BA+CentOS%20Linux%207%20(Core)%20+%20MobaXterm%20%E7%8E%AF%E5%A2%83%E5%AD%A6%E4%B9%A0%20L/image%207.png" alt="image.png"></p>
+<p>（4）查看当前网络IP</p>
+<p>用ip addr命令查看</p>
+<p><img src="/VMware%E8%99%9A%E6%8B%9F%E6%9C%BA+CentOS%20Linux%207%20(Core)%20+%20MobaXterm%20%E7%8E%AF%E5%A2%83%E5%AD%A6%E4%B9%A0%20L/image%208.png" alt="image.png"></p>
+<p>用ifconfig命令查看</p>
+<p><img src="/VMware%E8%99%9A%E6%8B%9F%E6%9C%BA+CentOS%20Linux%207%20(Core)%20+%20MobaXterm%20%E7%8E%AF%E5%A2%83%E5%AD%A6%E4%B9%A0%20L/image%209.png" alt="image.png"></p>
+<p>（5）测试网络可用性</p>
+<p>1）内网测试，ping配置的ip，按Ctrl+C组合键，结束当前命令</p>
+<p><img src="/VMware%E8%99%9A%E6%8B%9F%E6%9C%BA+CentOS%20Linux%207%20(Core)%20+%20MobaXterm%20%E7%8E%AF%E5%A2%83%E5%AD%A6%E4%B9%A0%20L/image%2010.png" alt="image.png"></p>
+<p>2）外网测试，ping <a target="_blank" rel="noopener" href="http://www.baidu.com,按ctrl+c组合键,结束当前命令/">www.baidu.com，按Ctrl+C组合键，结束当前命令</a></p>
+<p><img src="/VMware%E8%99%9A%E6%8B%9F%E6%9C%BA+CentOS%20Linux%207%20(Core)%20+%20MobaXterm%20%E7%8E%AF%E5%A2%83%E5%AD%A6%E4%B9%A0%20L/image%2011.png" alt="image.png"></p>
+<p>3）宿主机网络测试</p>
+<p>打开Windows宿主机的cmd命令提示符窗口，输入ping 虚拟机配置好的IP，如下所示，即网络可以ping通，说明网络配置好用了。</p>
+<p><img src="/VMware%E8%99%9A%E6%8B%9F%E6%9C%BA+CentOS%20Linux%207%20(Core)%20+%20MobaXterm%20%E7%8E%AF%E5%A2%83%E5%AD%A6%E4%B9%A0%20L/image%2012.png" alt="image.png"></p>
+<p>3、用MobaXterm的ssh去连接服务器</p>
+<p>（1）、点击会话</p>
+<p>（2）、选择ssh连接</p>
+<p>（3）、在弹出的对话框中，输入服务器的ip和用户名</p>
+<p>（4）、点击确定</p>
+<p><img src="/VMware%E8%99%9A%E6%8B%9F%E6%9C%BA+CentOS%20Linux%207%20(Core)%20+%20MobaXterm%20%E7%8E%AF%E5%A2%83%E5%AD%A6%E4%B9%A0%20L/image%2013.png" alt="image.png"></p>
+<p>第一次连接需要输入账号密码，连接上后就是这样子的。</p>
+<p><img src="/VMware%E8%99%9A%E6%8B%9F%E6%9C%BA+CentOS%20Linux%207%20(Core)%20+%20MobaXterm%20%E7%8E%AF%E5%A2%83%E5%AD%A6%E4%B9%A0%20L/image%2014.png" alt="image.png"></p>
+<p>至此环境已经搭建结束。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">白神悟空</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2026/03/08/ExportBlock-3943950a-519d-4a3c-b9cf-09b81d51a2ee-Part-1/VMware%E8%99%9A%E6%8B%9F%E6%9C%BA+CentOS%20Linux%207%20(Core)%20+%20MobaXterm%20%E7%8E%AF%E5%A2%83%E5%AD%A6%E4%B9%A0%20L%2031d9a204ea2680d3b8d7c9eaec0fb94d/">http://example.com/2026/03/08/ExportBlock-3943950a-519d-4a3c-b9cf-09b81d51a2ee-Part-1/VMware%E8%99%9A%E6%8B%9F%E6%9C%BA+CentOS%20Linux%207%20(Core)%20+%20MobaXterm%20%E7%8E%AF%E5%A2%83%E5%AD%A6%E4%B9%A0%20L%2031d9a204ea2680d3b8d7c9eaec0fb94d/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://example.com" target="_blank">白神悟空的学习成长记录</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a><a class="post-meta__tags" href="/tags/Linux/">Linux</a></div><div class="post-share"><div class="social-share" data-image="/img/tx.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width no-desc" href="/2026/03/07/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="C语言学习笔记"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">C语言学习笔记</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/tx.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">白神悟空</div><div class="author-info-description">相信奇迹的人本身和奇迹一样了不起！！！</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#VMware%E8%99%9A%E6%8B%9F%E6%9C%BA-CentOS-Linux-7-Core-MobaXterm-%E7%8E%AF%E5%A2%83%E5%AD%A6%E4%B9%A0-Linux"><span class="toc-number">1.</span> <span class="toc-text">VMware虚拟机+CentOS Linux 7 (Core) + MobaXterm 环境学习 Linux</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E7%AF%87%E4%B8%BA%E5%90%8E%E9%9D%A2%E5%AD%A6%E4%B9%A0Linux%E5%92%8C%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%96%B9%E9%9D%A2%E7%9A%84%E6%8A%80%E6%9C%AF%E7%9F%A5%E8%AF%86%E5%81%9A%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87%EF%BC%8C%E8%AF%A5%E7%8E%AF%E5%A2%83%E7%9A%84%E4%BC%98%E5%8A%BF%E5%9C%A8%E4%BA%8E%E5%B0%8F%E5%9E%8B%E7%AE%80%E5%8D%95%E6%98%93%E4%BA%8E%E5%87%86%E5%A4%87%E3%80%82"><span class="toc-number">1.1.</span> <span class="toc-text">本篇为后面学习Linux和大数据方面的技术知识做环境准备，该环境的优势在于小型简单易于准备。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E8%BD%AF%E4%BB%B6%E6%96%B9%E9%9D%A2%EF%BC%9A"><span class="toc-number">1.2.</span> <span class="toc-text">一、软件方面：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-number">1.3.</span> <span class="toc-text">二、环境搭建</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/03/08/ExportBlock-3943950a-519d-4a3c-b9cf-09b81d51a2ee-Part-1/VMware%E8%99%9A%E6%8B%9F%E6%9C%BA+CentOS%20Linux%207%20(Core)%20+%20MobaXterm%20%E7%8E%AF%E5%A2%83%E5%AD%A6%E4%B9%A0%20L%2031d9a204ea2680d3b8d7c9eaec0fb94d/" title="VMware虚拟机+CentOS Linux 7 (Core) + MobaXterm 环境学习 Linux">VMware虚拟机+CentOS Linux 7 (Core) + MobaXterm 环境学习 Linux</a><time datetime="2026-03-08T04:00:00.000Z" title="发表于 2026-03-08 12:00:00">2026-03-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/03/07/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="C语言学习笔记">C语言学习笔记</a><time datetime="2026-03-07T11:21:20.000Z" title="发表于 2026-03-07 19:21:20">2026-03-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/03/07/hello-world/" title="Hello World">Hello World</a><time datetime="2026-03-07T08:30:27.119Z" title="发表于 2026-03-07 16:30:27">2026-03-07</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By 白神悟空</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="150" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
